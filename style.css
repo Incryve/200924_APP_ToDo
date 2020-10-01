@@ -54,6 +54,10 @@ ul li {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  overflow-wrap: break-word;
+  /*text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;*/
 }
 
 /* Set all odd list items to a different color (zebra-stripes) */
@@ -80,7 +84,7 @@ ul li.checked::before {
   border-color: var(--ming);
   border-style: solid;
   border-width: 0 2px 2px 0;
-  top: 10px;
+  top: 15px;
   left: 16px;
   transform: rotate(45deg);
   height: 15px;
@@ -107,7 +111,7 @@ ul li.checked::before {
   padding-bottom: 15px;
   font-family: 'Baloo 2', cursive;
   font-weight: 800;
-  font-size: 36px;
+  font-size: 50px;
 }
 
 /* Clear floats after the header */
@@ -176,4 +180,24 @@ p {
   }
 }
 
+@media (min-width: 320px) { /* Mobile */
+  .container {
+    max-width: 300px;
+  }
 
+  .header {
+    padding: 20px 20px;
+  }
+
+  .header h2 {
+    font-size: 44px;
+  }
+
+  ul li {
+    padding-right: 30px;
+  }
+}
+
+footer {
+  margin-top: 10px;
+}
