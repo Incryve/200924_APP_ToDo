@@ -7,13 +7,13 @@ var myCollectionList = document.getElementsByTagName("li");
 var i;
 for (i = 0; i < myCollectionList.length; i++) {
   // create a node <span> using "createElement" DOM method
-  var span = document.createElement("SPAN");
+  var span = document.createElement("span");
+
+    // set the class of the node <span> using className property
+    span.className = "close";
   
   // create some text node for the span using "createTextNode" DOM method
   var txt = document.createTextNode("\u00D7");
-
-  // set the class of the node <span> using className property
-  span.className = "close";
 
   // append the text node to the node <span> using the "appendChild" method
   // appendChild method appends a node as the LAST child of another node
@@ -75,7 +75,7 @@ list.addEventListener('click', function(ev) {
 function newElement() {
 
   // create an empty <li> element with createElement() method
-  var li = document.createElement("LI");
+  var li = document.createElement("li");
 
   // take the value of the text field (tasks) and add it to a collection
   var inputValue = document.getElementById("myInput").value;
@@ -96,10 +96,10 @@ function newElement() {
     document.getElementById('myUl').appendChild(li);
   }
 
-  // I DON'T KNOW WHAT THIS DOES
+  // Set back the input value to zero 
   document.getElementById('myInput').value = "";
 
-  var span = document.createElement("SPAN");
+  var span = document.createElement("span");
   var txt = document.createTextNode("\u00D7");
 
   // sets class of the span to "close"
